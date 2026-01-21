@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Simon Purdie's Data Analysis & Design Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<!-- Google Fonts: Outfit for that modern, clean look -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="bg-stone-50 text-stone-900 selection:bg-stone-200 selection:text-stone-900 min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
+		<div class="w-full max-w-7xl mx-auto">
+			<slot />
+		</div>
+	</body>
+</html>

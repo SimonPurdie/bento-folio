@@ -1,0 +1,26 @@
+---
+interface Props {
+  title?: string;
+  class?: string;
+  noPadding?: boolean;
+}
+
+const { title, class: className, noPadding = false } = Astro.props;
+---
+
+<article 
+  class:list={[
+    "relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 group",
+    className
+  ]}
+>
+  {/* Optional subtle gradient overlay for depth */}
+  <div class="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+  <div class:list={["h-full w-full flex flex-col", { "p-6 md:p-8": !noPadding }]}>
+    {title && (
+      <h3 class="text-lg font-semibold text-stone-900 mb-2 z-10 relative">{title}</h3>
+    )}
+    <slot />
+  </div>
+</article>

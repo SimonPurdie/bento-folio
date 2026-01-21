@@ -1,16 +1,93 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import BentoCard from '../components/BentoCard.astro';
+import { personalInfo, projects, tools } from '../data/projects';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Simon Purdie | Data Analyst Portfolio">
+  <main class="w-full">
+    
+    <!-- Main Grid Container -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-auto">
+      
+      <!-- HERO CARD: Spans full width on mobile, 2x2 on desktop -->
+      <BentoCard class="md:col-span-2 md:row-span-2 bg-stone-100 flex flex-col justify-center min-h-[300px]">
+        <div class="flex flex-col justify-center h-full">
+          <div class="text-sm font-medium text-brand-sage mb-2 uppercase tracking-wide">Portfolio</div>
+          <h1 class="text-4xl md:text-5xl font-bold text-stone-800 mb-4 whitespace-pre-line leading-tight">
+            {personalInfo.name}
+          </h1>
+          <p class="text-xl md:text-2xl text-stone-600 font-medium mb-6 text-balance">
+            {personalInfo.title}
+          </p>
+          <p class="text-stone-500 max-w-md leading-relaxed">
+            {personalInfo.tagline}
+          </p>
+        </div>
+      </BentoCard>
+
+      <!-- SOCIALS / CONTACT: Small cards -->
+      <BentoCard class="md:col-span-1 md:row-span-1 bg-white flex flex-col justify-between group">
+        <div class="text-stone-400 font-medium">Links</div>
+        <div class="flex flex-col gap-2">
+          {personalInfo.socials.map((social) => (
+             <a href={social.url} class="text-stone-800 font-semibold hover:text-brand-sage transition-colors flex items-center gap-2">
+               {social.name} <span>&nearr;</span>
+             </a>
+          ))}
+        </div>
+      </BentoCard>
+
+      <!-- ABOUT ME: Text heavy card -->
+      <BentoCard class="md:col-span-1 md:row-span-2 bg-stone-800 text-stone-100">
+        <h3 class="text-xl font-bold mb-4 text-stone-200">About</h3>
+        <p class="text-stone-300 leading-relaxed text-sm">
+          {personalInfo.about}
+        </p>
+        <div class="mt-auto pt-6">
+           <div class="text-4xl">👋</div>
+        </div>
+      </BentoCard>
+
+      <!-- TECH STACK: Spans 1 col, 1 row (but maybe tall) -->
+      <BentoCard class="md:col-span-1 md:row-span-1 bg-stone-200">
+        <h3 class="font-bold text-stone-700 mb-4">Toolkit</h3>
+        <div class="flex flex-wrap gap-2">
+          {tools.map(t => (
+            <span class="px-2 py-1 bg-white/60 rounded-full text-xs font-medium text-stone-600 border border-stone-300/50">
+              {t.name}
+            </span>
+          ))}
+        </div>
+      </BentoCard>
+
+      <!-- PROJECTS LOOP -->
+      {projects.map((project) => (
+        <BentoCard class={`${project.span} ${project.color} group relative`}>
+          <div class="flex flex-col h-full justify-between">
+            <div>
+              <div class="flex gap-2 mb-3">
+                {project.tags.map(tag => (
+                  <span class="text-[10px] uppercase tracking-wider font-bold opacity-60 bg-black/5 px-2 py-1 rounded-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <h3 class="text-2xl font-bold text-stone-800 mb-2 group-hover:text-black transition-colors">
+                {project.title}
+              </h3>
+              <p class="text-stone-600 leading-relaxed opacity-90">
+                {project.description}
+              </p>
+            </div>
+            
+            <div class="mt-6 flex items-center gap-2 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300">
+               View Project &rarr;
+            </div>
+          </div>
+        </BentoCard>
+      ))}
+
+    </div>
+  </main>
+</Layout>
