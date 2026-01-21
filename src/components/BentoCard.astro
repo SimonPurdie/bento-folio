@@ -3,14 +3,19 @@ interface Props {
   title?: string;
   class?: string;
   noPadding?: boolean;
+  href?: string;
 }
 
-const { title, class: className, noPadding = false } = Astro.props;
+const { title, class: className, noPadding = false, href } = Astro.props;
+const Element = href ? 'a' : 'article';
 ---
 
-<article 
+<Element 
+  href={href}
+  target={href ? "_blank" : undefined}
+  rel={href ? "noopener noreferrer" : undefined}
   class:list={[
-    "relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 group",
+    "relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 group block",
     className
   ]}
 >
@@ -23,4 +28,4 @@ const { title, class: className, noPadding = false } = Astro.props;
     )}
     <slot />
   </div>
-</article>
+</Element>

@@ -66,7 +66,10 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- PROJECT: VS Code (Stone/Gray) (Col 1-2, Row 3) -->
-      <BentoCard class="md:col-span-2 md:row-span-1 bg-brand-stone group relative overflow-hidden rounded-tl-[2rem] rounded-br-[2rem]">
+      <BentoCard 
+        href={projects[0].link}
+        class="md:col-span-2 md:row-span-1 bg-brand-stone group relative overflow-hidden rounded-tl-[2rem] rounded-br-[2rem]"
+      >
           <div class="flex flex-col justify-between h-full relative z-10">
             <div class="flex justify-between items-start">
                {projects[0].tags.slice(0,3).map(tag => (
@@ -84,7 +87,10 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- PROJECT: WorkHunter (Clay/TerraCotta) (Col 4, Row 3) -->
-       <BentoCard class="md:col-span-1 md:row-span-1 bg-astro-clay group relative rounded-tr-[3rem] rounded-bl-[3rem]">
+       <BentoCard 
+         href={projects[1].link}
+         class="md:col-span-1 md:row-span-1 bg-astro-clay group relative rounded-tr-[3rem] rounded-bl-[3rem]"
+       >
           <div class="flex flex-col h-full text-white">
              <h3 class="text-xl font-bold mb-2">{projects[1].title}</h3>
              <p class="text-white/80 text-xs leading-relaxed">{projects[1].description}</p>
@@ -93,7 +99,10 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- PROJECT: Miyori (Lavender) (Col 1, Row 4) -->
-      <BentoCard class="md:col-span-1 md:row-span-1 bg-astro-lavender group relative overflow-hidden rounded-3xl">
+      <BentoCard 
+        href={projects[2].link}
+        class="md:col-span-1 md:row-span-1 bg-astro-lavender group relative overflow-hidden rounded-3xl"
+      >
          <div class="flex flex-col h-full relative z-10">
             <h3 class="text-xl font-bold text-stone-800 mb-1">{projects[2].title}</h3>
             <p class="text-stone-600 text-[10px] leading-tight">{projects[2].description.slice(0, 100)}...</p>
@@ -105,13 +114,14 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- PROJECT: Understanding Semantic Analysis (Sage) (Col 2-3, Row 4) -->
-      <BentoCard class="md:col-span-2 md:row-span-1 bg-brand-sage group relative overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem]">
+      <BentoCard 
+        href={projects[4].link}
+        class="md:col-span-2 md:row-span-1 bg-brand-sage group relative overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem]"
+      >
           <div class="flex flex-col justify-between h-full relative z-10">
              <div class="flex justify-between items-start">
                 <span class="text-[10px] uppercase tracking-wider font-bold opacity-70 bg-white/20 px-2 py-1 rounded-sm">NLP Project</span>
-                <a href={projects[4].link} class="text-stone-800 hover:text-white transition-colors">
-                  <span class="text-xs font-bold">GitHub ↗</span>
-                </a>
+                <span class="text-xs font-bold text-stone-800 opacity-0 group-hover:opacity-100 transition-opacity">View on GitHub ↗</span>
              </div>
              <div>
                 <h3 class="text-2xl font-bold text-stone-800 mb-1">{projects[4].title}</h3>
