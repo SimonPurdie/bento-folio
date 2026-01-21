@@ -8,9 +8,9 @@
   --color-brand-dark: #44403C;
 
   /* New "Vulnerable-Muted" Aesthetic Palette */
-  --color-astro-peach: #F6Cac9;
+  --color-astro-peach: #F6B8A9;
   /* Soft warm pink/peach */
-  --color-astro-mint: #C1E1D2;
+  --color-astro-mint: #C3DFD0;
   /* Soft sage/mint */
   --color-astro-sky: #B4DCDF;
   /* Muted blue/cyan */
@@ -20,6 +20,8 @@
   /* Muted yellow/orange */
   --color-astro-clay: #E9967A;
   /* Darker terra-cotta for contrast */
+  --color-astro-navy: #5C6276;
+  /* Darker blue/grey for contrast */
 
   --font-sans: 'Outfit', sans-serif;
 }

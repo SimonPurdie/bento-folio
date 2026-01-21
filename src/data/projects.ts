@@ -22,7 +22,7 @@ export const tools: Skill[] = [
     { name: 'Tableau', category: 'Visualization' },
     { name: 'Data Analysis', category: 'Visualization' },
     { name: 'Data Visualization', category: 'Visualization' },
-    { name: 'Agentic AI Development', category: 'Tools' },
+    { name: 'Agentic AI', category: 'Tools' },
     { name: 'Semantic Analysis', category: 'Tools' },
     { name: 'Problem Solving', category: 'Skills' },
     { name: 'Communication', category: 'Skills' }
@@ -31,7 +31,7 @@ export const tools: Skill[] = [
 export const projects: Project[] = [
     {
         title: 'VS Code PR Analysis',
-        description: 'A data analysis project, involving analysis of a large dataset from Microsoft’s VS Code repo. A full stack project from data collection to storytelling.',
+        description: 'Looks at a large dataset of Pull Requests from Microsoft’s VS Code repo.\nA full stack analysis project from data collection to storytelling.',
         tags: ['Data Analysis', 'Power BI', 'GraphQL', 'Python'],
         link: 'https://simonpurdie.github.io/VS-Code-PR-Analysis/',
         color: 'bg-orange-100/50',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     },
     {
         title: 'Miyori',
-        description: 'A multipurpose persistent AI agent with custom memory system and autonomous capabilities. Built from first principles to develop knowledge and intuition of core concepts in agentic AI.',
+        description: 'An Agentic AI project built from stratch to develop understanding of core concepts.',
         tags: ['Python', 'SQL', 'Agentic AI'],
         link: 'https://github.com/SimonPurdie/Miyori',
         color: 'bg-stone-200',
@@ -55,14 +55,14 @@ export const projects: Project[] = [
     },
     {
         title: 'IT Systems Leadership',
-        description: '6+ years managing critical systems at the Royal Courts of Justice. Bridging the gap between technical complexity and senior stakeholders.',
+        description: '6+ years managing critical systems at the Royal Courts of Justice.\nBridging the gap between technical complexity and senior stakeholders.',
         tags: ['Leadership', 'Communication', 'Problem Solving'],
         color: 'bg-white',
         span: 'md:col-span-1 md:row-span-1',
     },
     {
         title: 'Understanding Semantic Analysis',
-        description: 'An educational Jupyter Notebook exploring fundamentals of Semantic Analysis using modern machine learning tools like Sentence Transformers and Vector Embeddings.',
+        description: 'An educational Jupyter Notebook exploring fundamentals of Semantic Analysis using modern machine learning tools.',
         tags: ['Python', 'ML', 'NLP'],
         link: 'https://github.com/SimonPurdie/understanding-semantic-analysis',
         color: 'bg-brand-sage',
@@ -74,7 +74,7 @@ export const personalInfo = {
     name: 'Simon Purdie',
     title: 'Data Analyst | Programmer | Designer',
     tagline: 'I teach machines to find patterns, and show people why those patterns matter.',
-    about: 'With a background in IT Systems Management and Performing Arts, I bring a unique blend of technical depth and creative communication to data analysis. I love to build systems and solve problems.',
+    about: 'With a background in IT Systems Management and Performing Arts, I bring a unique blend of technical depth and creative communication to data analysis. \n\nI love to build systems and solve problems.',
     socials: [
         { name: 'GitHub', url: 'https://github.com/SimonPurdie' },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/in/simon-purdie-uk' },
