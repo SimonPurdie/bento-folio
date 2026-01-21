@@ -1,10 +1,26 @@
 @import "tailwindcss";
 
 @theme {
+  /* Legacy/Base colors */
   --color-brand-sage: #A3B18A;
   --color-brand-cream: #FDFCF8;
   --color-brand-stone: #E7E5E4;
   --color-brand-dark: #44403C;
+
+  /* New "Vulnerable-Muted" Aesthetic Palette */
+  --color-astro-peach: #F6Cac9;
+  /* Soft warm pink/peach */
+  --color-astro-mint: #C1E1D2;
+  /* Soft sage/mint */
+  --color-astro-sky: #B4DCDF;
+  /* Muted blue/cyan */
+  --color-astro-lavender: #E6E6FA;
+  /* Very light purple/slate hint */
+  --color-astro-mustard: #F4D35E;
+  /* Muted yellow/orange */
+  --color-astro-clay: #E9967A;
+  /* Darker terra-cotta for contrast */
+
   --font-sans: 'Outfit', sans-serif;
 }
 
