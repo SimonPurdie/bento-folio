@@ -30,11 +30,11 @@ export const tools: Skill[] = [
 
 export const projects: Project[] = [
     {
-        title: 'Miyori',
-        description: 'A multipurpose persistent AI agent with custom memory system and autonomous capabilities. Built from first principles to develop knowledge and intuition of core concepts in agentic AI.',
-        tags: ['Python', 'SQL', 'Agentic AI'],
-        color: 'bg-stone-200',
-        span: 'md:col-span-2 md:row-span-2',
+        title: 'VS Code PR Analysis',
+        description: 'A data analysis project, involving analysis of a large dataset from Microsoft’s VS Code repo. A full stack project from data collection to storytelling.',
+        tags: ['Data Analysis', 'Data Visualization', 'Power BI', 'GraphQL', 'Python'],
+        color: 'bg-orange-100/50',
+        span: 'md:col-span-2 md:row-span-1',
     },
     {
         title: 'WorkHunter',
@@ -44,17 +44,25 @@ export const projects: Project[] = [
         span: 'md:col-span-1 md:row-span-1',
     },
     {
-        title: 'VS Code PR Analysis',
-        description: 'A data analysis project, involving analysis of a large dataset from Microsoft’s VS Code repo. A full stack project from data collection to storytelling.',
-        tags: ['Data Analysis', 'Data Visualization', 'Power BI', 'GraphQL', 'Python'],
-        color: 'bg-orange-100/50',
-        span: 'md:col-span-1 md:row-span-2',
+        title: 'Miyori',
+        description: 'A multipurpose persistent AI agent with custom memory system and autonomous capabilities. Built from first principles to develop knowledge and intuition of core concepts in agentic AI.',
+        tags: ['Python', 'SQL', 'Agentic AI'],
+        color: 'bg-stone-200',
+        span: 'md:col-span-1 md:row-span-1',
     },
     {
         title: 'IT Systems Leadership',
         description: '6+ years managing critical systems at the Royal Courts of Justice. Bridging the gap between technical complexity and senior stakeholders.',
         tags: ['Leadership', 'Communication', 'Problem Solving'],
         color: 'bg-white',
+        span: 'md:col-span-1 md:row-span-1',
+    },
+    {
+        title: 'Understanding Semantic Analysis',
+        description: 'An educational Jupyter Notebook exploring fundamentals of Semantic Analysis using modern machine learning tools like Sentence Transformers and Vector Embeddings.',
+        tags: ['Python', 'ML', 'NLP'],
+        link: 'https://github.com/SimonPurdie/understanding-semantic-analysis',
+        color: 'bg-brand-sage',
         span: 'md:col-span-2 md:row-span-1',
     },
 ];
