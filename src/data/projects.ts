@@ -63,7 +63,7 @@ export const projects: Project[] = [
     {
         title: 'Understanding Semantic Analysis',
         description: 'An educational Jupyter Notebook exploring fundamentals of Semantic Analysis using modern machine learning tools.',
-        tags: ['Python', 'ML', 'NLP'],
+        tags: ['Python', 'Semantic Analysis', 'ML', 'NLP'],
         link: 'https://github.com/SimonPurdie/understanding-semantic-analysis',
         color: 'bg-brand-sage',
         span: 'md:col-span-2 md:row-span-1',
