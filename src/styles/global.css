@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  /* Breakpoints */
+  --breakpoint-xs: 430px;
+  --breakpoint-md: 1000px;
+
   /* Legacy/Base colors */
   --color-brand-sage: #A3B18A;
   --color-brand-cream: #FDFCF8;
