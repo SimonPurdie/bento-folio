@@ -47,7 +47,7 @@ export const projects: Project[] = [
     },
     {
         title: 'Miyori',
-        description: 'An Agentic AI project built from stratch to develop understanding of core concepts.',
+        description: 'An Agentic AI project built from stratch to develop understanding of core components and patterns.',
         tags: ['Python', 'SQL', 'Agentic AI'],
         link: 'https://github.com/SimonPurdie/Miyori',
         color: 'bg-stone-200',
