@@ -16,6 +16,7 @@ const Element = href ? 'a' : 'article';
   href={href}
   target={href ? "_blank" : undefined}
   rel={href ? "noopener noreferrer" : undefined}
+  data-bento="card"
   class:list={[
     "relative overflow-hidden rounded-3xl transition-all duration-300 group block",
     isInteractive ? "hover:shadow-xl hover:-translate-y-1 hover:z-10" : "",

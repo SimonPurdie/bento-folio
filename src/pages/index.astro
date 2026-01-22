@@ -11,7 +11,7 @@ import { personalInfo, projects, tools } from '../data/projects';
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-min">
       
       <!-- HERO CARD: Peach, Top Left (Cols 1-2, Rows 1-2) -->
-      <BentoCard class="md:col-span-2 md:row-span-2 bg-astro-peach flex flex-col justify-center min-h-[300px] rounded-tl-[4rem] rounded-br-[4rem]">
+      <BentoCard class="opacity-0 translate-y-32 md:col-span-2 md:row-span-2 bg-astro-peach flex flex-col justify-center min-h-[300px] rounded-tl-[4rem] rounded-br-[4rem]">
         <div class="flex flex-col justify-center h-full p-2">
           <div class="text-sm font-bold text-stone-600 mb-2 uppercase tracking-wide opacity-70">Portfolio</div>
           <h1 class="text-5xl md:text-6xl font-bold text-stone-800 mb-4 whitespace-pre-line leading-none tracking-tight">
@@ -35,7 +35,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- SOCIALS: Mustard (Col 3, Row 1) -->
-      <BentoCard interactive={true} class="md:col-span-1 md:row-span-1 bg-astro-mustard flex flex-col justify-center items-center text-center rounded-3xl">
+      <BentoCard interactive={true} class="opacity-0 translate-y-32 md:col-span-1 md:row-span-1 bg-astro-mustard flex flex-col justify-center items-center text-center rounded-3xl">
         <div class="flex flex-col gap-3 w-full">
           {personalInfo.socials.map((social) => (
              <a href={social.url} class="text-stone-800 font-bold text-lg hover:text-white transition-colors flex items-center justify-center gap-2 px-4 py-2 bg-white/20 rounded-full hover:bg-white/40">
@@ -46,7 +46,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- TECH STACK: Sky Blue (Col 4, Rows 1-2) -->
-      <BentoCard class="md:col-span-1 md:row-span-2 bg-astro-sky flex flex-col rounded-tr-[3rem] rounded-bl-[3rem]">
+      <BentoCard class="opacity-0 translate-y-32 md:col-span-1 md:row-span-2 bg-astro-sky flex flex-col rounded-tr-[3rem] rounded-bl-[3rem]">
         <h3 class="font-bold text-stone-700 mb-4 text-center">Toolkit</h3>
         <div class="flex flex-wrap justify-center gap-2">
           {tools.map(t => (
@@ -58,7 +58,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- ABOUT ME: Mint (Col 3, Rows 2-3) -->
-      <BentoCard class="md:col-span-1 md:row-span-2 bg-astro-mint text-stone-800 shape-leaf-bl">
+      <BentoCard class="opacity-0 translate-y-32 md:col-span-1 md:row-span-2 bg-astro-mint text-stone-800 shape-leaf-bl">
         <h3 class="text-xl font-bold mb-4 text-stone-700">About</h3>
         <p class="text-stone-700 leading-relaxed text-sm font-medium whitespace-pre-line">
           {personalInfo.about}
@@ -70,7 +70,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       <!-- PROJECT: VS Code (Stone/Gray) (Col 1-2, Row 3) -->
       <BentoCard 
         href={projects[0].link}
-        class="md:col-span-2 md:row-span-1 bg-astro-navy group relative overflow-hidden rounded-tl-[2rem] rounded-br-[2rem]">
+        class="opacity-0 translate-y-32 md:col-span-2 md:row-span-1 bg-astro-navy group relative overflow-hidden rounded-tl-[2rem] rounded-br-[2rem]">
           <div class="flex flex-col justify-between h-full relative z-10">
             <div class="flex justify-between items-start">
               <div class="flex flex-wrap gap-2">
@@ -91,7 +91,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       <!-- PROJECT: WorkHunter (Clay/TerraCotta) (Col 4, Row 3) -->
        <BentoCard 
          href={projects[1].link}
-         class="md:col-span-1 md:row-span-1 bg-astro-clay group relative rounded-tr-[3rem] rounded-bl-[3rem]"
+         class="opacity-0 translate-y-32 md:col-span-1 md:row-span-1 bg-astro-clay group relative rounded-tr-[3rem] rounded-bl-[3rem]"
        >
           <div class="flex flex-col h-full text-white">
              <h3 class="text-xl font-bold mb-2">{projects[1].title}</h3>
@@ -102,7 +102,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       <!-- PROJECT: Miyori (Lavender) (Col 1, Row 4) -->
       <BentoCard 
         href={projects[2].link}
-        class="md:col-span-1 md:row-span-1 bg-astro-sky group relative overflow-hidden rounded-3xl"
+        class="opacity-0 translate-y-32 md:col-span-1 md:row-span-1 bg-astro-sky group relative overflow-hidden rounded-3xl"
       >
          <div class="flex flex-col h-full relative z-10">
             <h3 class="text-xl font-bold text-stone-800 mb-1">{projects[2].title}</h3>
@@ -117,7 +117,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       <!-- PROJECT: Understanding Semantic Analysis (Sage) (Col 2-3, Row 4) -->
       <BentoCard 
         href={projects[4].link}
-        class="md:col-span-2 md:row-span-1 bg-astro-peach group relative overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem]"
+        class="opacity-0 translate-y-32 md:col-span-2 md:row-span-1 bg-astro-peach group relative overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem]"
       >
           <div class="flex flex-col justify-between h-full relative z-10">
             <div class="flex justify-between items-start">
@@ -137,7 +137,7 @@ import { personalInfo, projects, tools } from '../data/projects';
       </BentoCard>
 
       <!-- PROJECT: IT Systems Leadership (White) (Col 4, Row 4) -->
-      <BentoCard class="md:col-span-1 md:row-span-1 bg-astro-lavender group relative rounded-3xl border border-stone-200 shadow-sm">
+      <BentoCard class="opacity-0 translate-y-32 md:col-span-1 md:row-span-1 bg-astro-lavender group relative rounded-3xl border border-stone-200 shadow-sm">
           <div class="flex flex-col h-full">
              <h3 class="text-lg font-bold text-stone-700 mb-1">{projects[3].title}</h3>
              <p class="text-stone-500 text-sm leading-snug whitespace-pre-line">{projects[3].description}</p>
@@ -147,3 +147,38 @@ import { personalInfo, projects, tools } from '../data/projects';
     </div>
   </main>
 </Layout>
+
+<script>
+  // Script to handle the bento grid entrance animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('[data-bento="card"]') as NodeListOf<HTMLElement>;
+    
+    // Check if the user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      cards.forEach(card => {
+        card.classList.remove('opacity-0', 'translate-y-32');
+      });
+      return;
+    }
+
+    cards.forEach((card, index) => {
+      // Add the transition class for the entrance
+      // using a custom cubic-bezier for a "heavy" feel
+      card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+      
+      // Delay calculation (staggered)
+      const delay = index * 100;
+      
+      setTimeout(() => {
+        card.classList.remove('opacity-0', 'translate-y-32');
+      }, delay);
+      
+      // Cleanup after animation to let hover effects work with their own duration
+      setTimeout(() => {
+        card.style.transition = '';
+      }, delay + 1000);
+    });
+  });
+</script>
