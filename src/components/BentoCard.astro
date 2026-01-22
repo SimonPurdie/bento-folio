@@ -4,9 +4,11 @@ interface Props {
   class?: string;
   noPadding?: boolean;
   href?: string;
+  interactive?: boolean;
 }
 
-const { title, class: className, noPadding = false, href } = Astro.props;
+const { title, class: className, noPadding = false, href, interactive } = Astro.props;
+const isInteractive = interactive ?? !!href;
 const Element = href ? 'a' : 'article';
 ---
 
@@ -15,7 +17,8 @@ const Element = href ? 'a' : 'article';
   target={href ? "_blank" : undefined}
   rel={href ? "noopener noreferrer" : undefined}
   class:list={[
-    "relative overflow-hidden rounded-3xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:z-10 group block",
+    "relative overflow-hidden rounded-3xl transition-all duration-300 group block",
+    isInteractive ? "hover:shadow-xl hover:-translate-y-1 hover:z-10" : "",
     className
   ]}
 >
